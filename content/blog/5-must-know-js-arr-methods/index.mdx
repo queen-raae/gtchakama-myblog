@@ -1,0 +1,220 @@
+---
+slug: 5-must-know-js-arr-methods
+date: 2021-05-15
+title: "5 Must Know JavaScript Array Methods"
+description: "In programming, an array is a collection of elements or items. Arrays store data as elements and retrieve them back when you need them."
+categories: ["10 min read ☕"]
+keywords:
+  [
+    "test",
+    "JavaScript array methods",
+    "Zim blogger",
+    "zim tech",
+    "techzim ",
+    "Arrays",
+    "map",
+    "filter",
+    "find",
+    "entries",
+    "pop",
+    "chakama",
+    "George Chakama",
+    "Functions",
+    "stack-overflow",
+  ]
+banner: "./jsarray.jpg"
+published: true
+author: "George Chakama"
+---
+
+Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can change at any time, and data can be stored at non-contiguous locations in the array, JavaScript arrays are not guaranteed to be dense; this depends on how the programmer chooses to use them. In general, these are convenient characteristics; but if these features are not desirable for your particular use, you might consider using typed arrays.
+
+# Here are the array methods we are going to look at
+
+| Method  | Description                                                                             | Use           |
+| ------- | --------------------------------------------------------------------------------------- | ------------- |
+| Map     | Creates a new array with the result of calling a function for each array element        | arr.map()     |
+| Filter  | Returns a new array with all elements that pass the test defined by the given function. | arr.filter()  |
+| Pop     | Removes the last element of an array, and returns that element                          | arr.pop()     |
+| Find    | Returns the value of the first element in an array that pass a test                     | arr.find()    |
+| Entries | Returns a key/value pair Array Iteration Object                                         | arr.entries() |
+
+---
+
+## Map ( )
+
+> This is one of my Favorite array methods. The map( ) method creates a new array populated with the results of calling a provided function on every element in the calling array. This method calls the provided function once for each element in an array, in order. It Returns a new array with elements as the return values from the callback function for each element.
+
+```js
+arr.map(callback(currentValue), thisArg)
+```
+
+### map( ) Parameteres
+
+The map( ) method takes in:- callback - The function called for every array element. Its return values are added to the new array. It takes in: 1. currentValue - The current element being passed from the array.
+
+- thisArg (optional) - Value to use as this when executing callback. By default, it is undefined.
+
+#### Notes
+
+- map( ) does not change the original array. map( ) executes
+- callback once for each array element in order. map( ) does not
+- execute callback for array elements without values.
+
+### Example 1: Mapping array elements
+
+Lets make a small Array to explain and demonstrate the method
+
+```js
+let arr = [3, 4, 5, 6]
+let modifiedArr = arr.map(function (element) {
+  return element * 3
+})
+console.log(modifiedArr)
+// [9, 12, 15, 18]
+```
+
+---
+
+## 2 - Array filter( )
+
+- Returns a new array with only the elements that passed the test
+
+```js
+var newArray = array.filter(function (item) {
+  return condition
+})
+```
+
+### filter( ) Parameteres
+
+The filter( ) method takes in:- callback - The test function to execute on each array element; returns true if element passes the test, else false. It takes in: 1. element - The current element being passed from the array.
+
+- thisArg (optional) - The value to use as this when executing callback. By default, it is undefined.
+
+#### Notes
+
+- filter ( ) does not change the original array.
+- filter( ) does not execute callback for array elements without values.
+
+### Example 1: filtering array elements
+
+Lets make a small Array to explain and demonstrate the method
+
+```js
+var numbers = [1, 3, 6, 8, 11]
+var lucky = numbers.filter(function (number) {
+  return number > 7
+}) // [ 8, 11 ]
+```
+
+---
+
+## 3 - Array Pop ( )
+
+This method changes the length of the array. The syntax of the pop( ) method is:
+
+```js
+arr.pop()
+```
+
+### pop( ) Parameteres
+
+- The pop( ) method does not have any parameters.
+
+### Return value from pop( )
+
+- Removes the last element from array and returns that value.
+- Returns undefined if the array is empty.
+
+#### Notes
+
+- This method changes the original array and its length.
+- To remove the first element of an array, use the JavaScript Array shift() method.
+
+### Example 1: Popping array elements
+
+Lets make a small Array to explain and demonstrate the method
+
+```js
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"]
+
+console.log(plants.pop())
+
+// expected output: "tomato" console.log(plants);
+
+// expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+```
+
+---
+
+## 4 - Array find ( )
+
+The JavaScript Array find ( ) method returns the value of the first array element that satisfies the provided test function. The syntax of the find ( ) method is:
+
+```js
+arr.find(callback(element, index, arr), thisArg)
+```
+
+### Find ( ) Parameteres
+
+- callback - Function to execute on each element of the array. It takes in:
+
+1.  element - The current element of array.
+
+- thisArg (optional) - Object to use as this inside callback.
+
+### Return value from find( )
+
+- Returns the value of the first element in the array that satisfies the given function.
+- Returns undefined if none of the elements satisfy the function.
+
+#### Notes
+
+- This method changes the original array and its length.only use find when you want a single element returned, and that it returns undefined if nothing is found! Otherwise, use the filter method when you need multiple elements returned.
+
+### Example 1: finding array elements
+
+Lets make a small Array to explain and demonstrate the method
+
+```js
+const trees = ["birch", "maple", "oak", "poplar"]
+const result = trees.find(tree => tree.startsWith("m"))
+// "maple"
+```
+
+---
+
+## 5 - Array entries( )
+
+In JavaScript, entries( ) is an Array method that is used to return a new Array iterator object that allows you to iterate through the key/value pairs in the array. Because the entries() method is a method of the Array object, it must be invoked through a particular instance of the Array class. The syntax of the entries ( ) method is:
+
+```js
+arr.entries()
+```
+
+### Entries( ) Parameteres
+
+- The entries( ) method does not have any parameters.
+
+### Return value from entries( )
+
+- Returns a new Array iterator object.
+
+#### Notes
+
+- The entries( ) method does not change the original array.
+
+### Example 1: Entries ( )
+
+Lets make a small Array to explain and demonstrate the method
+
+```js
+const languages = ["JavaScript", "Java", "C", "C++", "Python", "Lua"]
+let iterator = languages.entries()
+for (let entry of iterator) {
+  console.log(entry)
+}
+// OutPut :
+;[0, "JavaScript"][(1, "Java")][(2, "C")][(3, "C++")][(4, "Python")][(5, "Lua")]
+```
