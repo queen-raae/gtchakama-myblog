@@ -1,0 +1,132 @@
+---
+slug: usestate-toggle
+date: 2021-08-15
+title: 'Toggle with useState 🤒.'
+description: 'If you are a React developer, and haven’t learned about React hooks yet, this will be the perfect article for you. In this post, we are going to dive into the most used React Hook, the useState ( ).'
+categories: ['8 min read ☕']
+keywords:
+  [
+    'React Toggle',
+    'Toggle State',
+    'React Hooks',
+    'useState',
+    'React useState',
+    'Understanding Hooks',
+    'Handling State',
+    'React State Management',
+  ]
+banner: './banner.jpg'
+published: true
+author: 'George Chakama'
+---
+
+# Introduction to **useState** :
+
+> Before we get started, lets quickly define what a Hook is. **Hooks**
+> solves the problem of code reuse across components. Hooks let you use
+> React without classes, This does not mean that React is getting
+> rid of classes but hooks is just an alternate approach.
+
+## 🚔 Rules of Hooks
+
+Hooks are JavaScript functions, but they impose two additional rules:
+
+- Only call Hooks at the top level. Don’t call Hooks inside loops,
+  conditions, or nested functions.
+- Only call Hooks from React function components. Don’t
+  call Hooks from regular JavaScript functions.
+
+## 👨‍🦯 Understanding Hooks [ useState ]
+
+![toggle useState](https://media.giphy.com/media/u5xHC34oZ95e0JggMe/giphy.gif)
+
+We are going to jump into a small example using useState to create a toggle element.
+We're going to assume that you've run through the process of setting up your React
+project. If not, take a second and run through [Create React App](https://reactjs.org/docs/create-a-new-react-app.html).
+
+From there, we're going to create a new component to test our basic toggle
+
+1. The first thing we need to do is import the useState from React.
+
+```javascript
+import React, { useState } from 'react'
+```
+
+2. The next step is to declare the state variable for the component
+
+```javascript
+const [showEmoji, setShowemoji] = useState('')
+```
+
+Here we have declared a new state variable called
+showEmoji. The useState then sets the initial value for
+showEmoji here as an empty string "". **useState** is
+the same as _this.state_ in our class components.
+
+## 📦 What does useState return?
+
+It returns a pair of values: the current state and a function
+that updates it. In our example, the current state is **showEmoji**
+and the function that updates it is **setShowemoji**.
+
+[Github Gist](https://gist.github.com/gtchakama/317c3b5d450dbcddbd20b6a327e73ca5)
+
+# Lets get into it now
+
+we are going to create 2 variables. These variables will be our
+toggle values.
+
+```javascript
+const emoji = '🤒'
+const emoji2 = '👨‍⚕️'
+```
+
+They will be assigned to our useState variable "showEmoji". Just
+like every Developer out there, I had problems naming these
+variables 😂😂.
+
+## How we are going to Toggle
+
+For us to `toggle` the state we need a button. Our button will contain
+an onClick event handler that will have a function to change our State.
+
+We also need a way to see our changed state variable, so there's going to be
+an h1 holding our showEmoji value.
+
+```jsx
+<div>
+  <h1> {showEmoji ? emoji : emoji2}</h1>{' '}
+  <button onClick={e => setShowemoji(!showEmoji)}>Toggle</button>
+</div>
+```
+
+# Understanding the process
+
+Our h1 stores the showEmoji state variable, but our showEmoji variable
+is asigned to a boolean state `["true/false" = "emoji/emoji2" = "🤒/👨‍⚕️"]`. So
+our showEmoji is asigned to what ever value matched.
+
+## The Logical Not (!)
+
+A single `!` operator in JavaScript gives us the ability to set the
+opposite of the value immediately adjacent to the operator. We
+can use this operator to return true or false depending on whether
+or not a value is defined.
+
+## Handling State
+
+To update the value we need an onClick listener. It will have a callback function,
+this function is going to listen to button clicks. `(e)` for event, specifies the button events.
+The onClick contains our function `setShowemoji()` for managing the state variable showEmoji.
+
+Our `setShowemoji` will be passed showEmoji signed to Logical Not `!`, this will set showEmoji to the opposite.
+We can now move to our `h1` where we asigned our `showEmoji` variable. We use JS ternary operator to decide
+the asigned values from our showEmoji variable. How it will work => If the showEmoji is true asign to `emoji` else
+asign to `emoji2`. Our button's onclick event toggles the state by making it the opposite every time we click it.
+
+## Conclusion
+
+And thats how we can toggle and change our state variable, this blog uses useState too when you submit the form. I have implemented it to change the Title
+but i want it to do more. Soon I will make the form dissappear and show a reward
+that you can download or a link to something with an awesome discount. This will probaly take
+a day to implement but ... mandem is lazy these days 😂😂.
