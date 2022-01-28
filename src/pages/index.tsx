@@ -12,7 +12,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="Home" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
