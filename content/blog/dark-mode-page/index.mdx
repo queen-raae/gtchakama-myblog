@@ -1,0 +1,174 @@
+---
+slug: dark-theme-page
+date: 2021-05-07
+title: 'Simple Dark-Mode page.'
+description: 'A dark theme displays dark surfaces across the majority of a UI. Its designed to be a supplemental mode to a default (or light) theme. Lets quickly jump into a small Demo.'
+categories: ['10 min read ☕']
+keywords:
+  [
+    'test',
+    'Dark-Mode',
+    chakama,
+    'George Chakama',
+    'theme',
+    'dark theme',
+    'Javascript',
+    'Zim blogger',
+    'zim tech',
+    'techzim',
+  ]
+banner: './dark-theme.jpg'
+published: true
+author: 'George Chakama'
+---
+
+
+Dark mode is not a hot topic anymore, but I was still interested in understanding the mechanic behind a dark mode. My goal was to create an easy solution with pure CSS and JS. Not only should my dark mode respect the system preference, but it should also provide a toggle to switch between the light and dark mode as well as persist the choice somehow.
+
+Dark theme UIs use predominantly dark surfaces, with sparse color accents. They emit low levels of light while maintaining a high standard of usability. Dark mode has gained a lot of traction recently. Like Apple, for instance, has added dark mode to its iOS and MacOS operating systems. Windows and Google have done the same. We are gonna jump into a small project to understand how Dark Mode works.
+
+<div class="content-div">
+  <div class="flex-item-left">
+    {' '}
+    <a href="https://github.com/gtchakama/dark-theme" target="_blank">
+      {' '}
+      Github Repo
+    </a>{' '}
+  </div>
+  <div class="flex-item-right">
+    <a href="https://dark-themed.netlify.app/" target="_blank">
+      {' '}
+      Live Demo
+    </a>
+  </div>
+</div>
+
+---
+
+## Step 1
+
+Lets quickly start by
+
+1. Structuring our Page
+2. Creating a small Div with our heading and a button. Our button will have an Onclick eventlistener that will help us listen for a click event on it.
+
+<div>
+<div className="code-src" >
+  index.html
+  <div className="html code-lang">html</div>
+</div>
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Mode Demo</title>
+  <link rel="stylesheet" href="styles/light-mode.css" id="theme" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Dark Mode by changing the style sheet.</h1>
+    <button onclick="changeTheme()">Switch Theme</button>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+```
+
+</div>
+
+## Step 2 [ The Theme/s ]
+
+There are two ways we can have our Dark theme. We can choose to work with the Dom and utelize Adding and removing classes for our Wrapper div. This is a bit boring and it will add several lines of code.
+
+Option 2 involves working with our Stylsheet in a dope way. We are going to make 2 stylesheets that will be used by our eventlistener. One will conatin our Light Mode theme and the other our Dark Mode.
+
+<div>
+<div className="code-src" >
+  Light Theme
+  <div style={{ background: '#ff9800', }} className="code-lang">CSS</div>
+</div>
+
+```css
+h1 {
+  color: #4d4d4d;
+}
+
+button {
+  background-color: rgb(43, 43, 43);
+  color: #fff;
+}
+button:hover {
+  background: rgb(45, 50, 102);
+  color: rgb(255, 255, 255);
+}
+```
+
+</div>
+
+<div>
+<div className="code-src" >
+  Dark theme
+  <div style={{ background: '#ff9800', }} className="code-lang">CSS</div>
+</div>
+
+```css
+body {
+  background: rgb(29, 29, 29);
+  transition: 1s;
+}
+
+h1 {
+  color: #fff;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+button:hover {
+  background: rgb(45, 50, 102);
+  color: rgb(255, 255, 255);
+}
+```
+
+</div>
+
+---
+
+## Step 3
+
+Now that we have created our Stlyes, we need a way to grab them in our Javascript file. To do that we are gonna go back to our index file and go to our css link tag, add an ID of "theme" to the tag. Do you still remember our Event listener Function ?, lets make it now. We are going to make a few variables for the Theme ID in our css and also 2 variables for our 2 different stylesheets. Our stylesheets variables will be asigned to the file directory.
+
+<div>
+<div className="code-src" >
+  src/index.js
+  <div style={{ background: '#f7df1e', }} className="code-lang">JS</div>
+</div>
+
+```javascript
+// Function that swaps the stylesheet.
+function changeTheme() {
+  let theme = document.getElementById('theme')
+  let lightTheme = 'styles/light-mode.css'
+  let darkTheme = 'styles/dark-mode.css'
+  // Checking what stylesheet the link tag has.
+  if (theme.getAttribute('href') == lightTheme) {
+    theme.href = darkTheme
+  } else {
+    theme.href = lightTheme
+  }
+}
+```
+
+</div>
+
+---
+
+## How Does our Function actually work?
+
+We are going to use our If conditional command for handling the decision of our onClick event. Lets work with the Dom now. Our CSS link tags contain an attribute called href that points to our stylesheet. We will use this href to traverse the Dom and put another styling. Our function will grab the Theme ID which refers to our css tag and we will use the getAttribute() method to get the "href" attribute.
+
+Here is how our if statement will work, if the current them is equal to light mode then change it to dark else if it is equal to the dark mode then change it to light. we actually don't need to have a code for changing to dark mode, we will just use that one if statement alongside else.
+
+So our function gets called everytime by our onClick event whenever the user clicks the button. Fun right? This was an awesome session, let me know if you need more of these Short tutorials by contacting me.
