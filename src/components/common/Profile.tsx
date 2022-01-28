@@ -12,7 +12,6 @@ const Bio: React.FC<EmptyProps> = () => {
         siteMetadata {
           author {
             name
-            summary
           }
           social {
             twitter
@@ -43,7 +42,7 @@ const Bio: React.FC<EmptyProps> = () => {
           alt="Profile picture"
         />
         <div>
-          <h3 className="font-bold font-exo tracking-wide">{author.name}</h3>
+          <h1 className="font-bold font-exo text-2xl  tracking-wide">{author.name}</h1>
           <div className="pt-2 flex space-x-4">
             <Button
               label="Twitter"
@@ -66,7 +65,9 @@ const Bio: React.FC<EmptyProps> = () => {
           </div>
         </div>
       </div>
-      <p className="mt-5 font-yrsa text-lg text-skin-fg">{author.summary}</p>
+      <p className="mt-5 font-yrsa text-lg text-skin-fg">I'm super passionate about exploring and building open-source web apps
+          and tools. Currently, I'm diving into the React ecosystem with backend
+          in Node.js</p>
     </>
   )
 }
