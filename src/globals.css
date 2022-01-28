@@ -23,8 +23,8 @@
     --color-anchor: #8b5cf6;
     --color-anchor-hover: #a78bfa;
 
-    --color-primary: #fee2e2;
-    --color-secondary: #fef3c7;
+    --color-primary: #A2D6F9;
+    --color-secondary: #A2D6F9;
   }
 
   .dark {
@@ -41,8 +41,8 @@
     --color-anchor: #f472b6;
     --color-anchor-hover: #ec4899;
 
-    --color-primary: #1e3a8a;
-    --color-secondary: #4c1d95;
+    --color-primary: #0C1B33;
+    --color-secondary: #0C1B33;
   }
 }
 
@@ -51,7 +51,22 @@
   pre[class*="language-"] {
     text-shadow: none !important;
   }
-
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  #1f2937;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
   .token.operator,
   .token.entity,
   .token.url,
