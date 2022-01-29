@@ -1,28 +1,27 @@
 ---
 slug: dark-theme-page
 date: 2021-05-07
-title: 'Simple Dark-Mode page.'
-description: 'A dark theme displays dark surfaces across the majority of a UI. Its designed to be a supplemental mode to a default (or light) theme. Lets quickly jump into a small Demo.'
-categories: ['10 min read ☕']
+title: "Simple Dark-Mode page."
+description: "A dark theme displays dark surfaces across the majority of a UI. Its designed to be a supplemental mode to a default (or light) theme. Lets quickly jump into a small Demo."
+categories: ["10 min read ☕"]
 keywords:
   [
-    'test',
-    'Dark-Mode',
+    "test",
+    "Dark-Mode",
     chakama,
-    'George Chakama',
-    'theme',
-    'dark theme',
-    'Javascript',
-    'Zim blogger',
-    'zim tech',
-    'techzim',
+    "George Chakama",
+    "theme",
+    "dark theme",
+    "Javascript",
+    "Zim blogger",
+    "zim tech",
+    "techzim",
   ]
-tags: Theming
-banner: './dark-theme.jpg'
+tags: Theme
+banner: "./dark-theme.jpg"
 published: true
-author: 'George Chakama'
+author: "George Chakama"
 ---
-
 
 Dark mode is not a hot topic anymore, but I was still interested in understanding the mechanic behind a dark mode. My goal was to create an easy solution with pure CSS and JS. Not only should my dark mode respect the system preference, but it should also provide a toggle to switch between the light and dark mode as well as persist the choice somehow.
 
@@ -30,15 +29,15 @@ Dark theme UIs use predominantly dark surfaces, with sparse color accents. They 
 
 <div class="content-div">
   <div class="flex-item-left">
-    {' '}
+    {" "}
     <a href="https://github.com/gtchakama/dark-theme" target="_blank">
-      {' '}
+      {" "}
       Github Repo
-    </a>{' '}
+    </a>{" "}
   </div>
   <div class="flex-item-right">
     <a href="https://dark-themed.netlify.app/" target="_blank">
-      {' '}
+      {" "}
       Live Demo
     </a>
   </div>
@@ -150,11 +149,11 @@ Now that we have created our Stlyes, we need a way to grab them in our Javascrip
 ```javascript
 // Function that swaps the stylesheet.
 function changeTheme() {
-  let theme = document.getElementById('theme')
-  let lightTheme = 'styles/light-mode.css'
-  let darkTheme = 'styles/dark-mode.css'
+  let theme = document.getElementById("theme")
+  let lightTheme = "styles/light-mode.css"
+  let darkTheme = "styles/dark-mode.css"
   // Checking what stylesheet the link tag has.
-  if (theme.getAttribute('href') == lightTheme) {
+  if (theme.getAttribute("href") == lightTheme) {
     theme.href = darkTheme
   } else {
     theme.href = lightTheme
