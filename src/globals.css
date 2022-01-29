@@ -23,12 +23,12 @@
     --color-anchor: #8b5cf6;
     --color-anchor-hover: #a78bfa;
 
-    --color-primary: #A2D6F9;
-    --color-secondary: #A2D6F9;
+    --color-primary: #F3EAF4;
+    --color-secondary: #F3EAF4;
   }
 
   .dark {
-    --color-background: #002f3c;
+    --color-background: #373F51;
     --color-background-muted: #52525b;
     --color-background-medium: #e5e7eb;
 
