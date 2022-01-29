@@ -1,23 +1,24 @@
 ---
 slug: usestate-toggle
 date: 2021-08-15
-title: 'Toggle with useState 🤒.'
-description: 'If you are a React developer, and haven’t learned about React hooks yet, this will be the perfect article for you. In this post, we are going to dive into the most used React Hook, the useState ( ).'
-categories: ['8 min read ☕']
+title: "Toggle with useState 🤒."
+description: "If you are a React developer, and haven’t learned about React hooks yet, this will be the perfect article for you. In this post, we are going to dive into the most used React Hook, the useState ( )."
+categories: ["8 min read ☕"]
 keywords:
   [
-    'React Toggle',
-    'Toggle State',
-    'React Hooks',
-    'useState',
-    'React useState',
-    'Understanding Hooks',
-    'Handling State',
-    'React State Management',
+    "React Toggle",
+    "Toggle State",
+    "React Hooks",
+    "useState",
+    "React useState",
+    "Understanding Hooks",
+    "Handling State",
+    "React State Management",
   ]
-banner: './banner.jpg'
+tags: Handling State, Hooks
+banner: "./banner.jpg"
 published: true
-author: 'George Chakama'
+author: "George Chakama"
 ---
 
 # Introduction to **useState** :
@@ -49,13 +50,13 @@ From there, we're going to create a new component to test our basic toggle
 1. The first thing we need to do is import the useState from React.
 
 ```javascript
-import React, { useState } from 'react'
+import React, { useState } from "react"
 ```
 
 2. The next step is to declare the state variable for the component
 
 ```javascript
-const [showEmoji, setShowemoji] = useState('')
+const [showEmoji, setShowemoji] = useState("")
 ```
 
 Here we have declared a new state variable called
@@ -77,8 +78,8 @@ we are going to create 2 variables. These variables will be our
 toggle values.
 
 ```javascript
-const emoji = '🤒'
-const emoji2 = '👨‍⚕️'
+const emoji = "🤒"
+const emoji2 = "👨‍⚕️"
 ```
 
 They will be assigned to our useState variable "showEmoji". Just
@@ -95,7 +96,7 @@ an h1 holding our showEmoji value.
 
 ```jsx
 <div>
-  <h1> {showEmoji ? emoji : emoji2}</h1>{' '}
+  <h1> {showEmoji ? emoji : emoji2}</h1>{" "}
   <button onClick={e => setShowemoji(!showEmoji)}>Toggle</button>
 </div>
 ```
