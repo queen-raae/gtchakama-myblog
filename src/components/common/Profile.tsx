@@ -68,6 +68,7 @@ const Bio: React.FC<EmptyProps> = () => {
       <p className="mt-5 font-yrsa text-lg text-skin-fg">I'm super passionate about exploring and building open-source web apps
           and tools. Currently, I'm diving into the React ecosystem with backend
           in Node.js</p>
+          <h1>Assume Cool Feature</h1>
     </>
   )
 }
