@@ -31,14 +31,14 @@ const Bio: React.FC<EmptyProps> = () => {
     <>
       <div className="flex items-center space-x-3">
         <StaticImage
-          className="rounded-full overflow-hidden"
+          className="rounded-md overflow-hidden"
           layout="fixed"
           formats={["auto", "webp", "avif"]}
-          src="../../images/profile-pic.png"
+          src="https://i.ibb.co/G0zK7BW/ignite-23-01.jpg"
           width={50}
           height={50}
           quality={95}
-          imgStyle={{ borderRadius: "100%" }}
+          imgStyle={{ borderRadius: "20%" }}
           alt="Profile picture"
         />
         <div>
@@ -68,9 +68,9 @@ const Bio: React.FC<EmptyProps> = () => {
       <p className="mt-5 font-yrsa text-lg text-skin-fg">I'm super passionate about exploring and building open-source web apps
           and tools. Currently, I'm diving into the React ecosystem with backend
           in Node.js</p>
-          <h1 className="font-bold font-exo text-2xl  tracking-wide">Assume Cool Feature</h1>
-          <h1 className="font-bold font-exo text-2xl  tracking-wide">Mini Form</h1>
-          <h1 className="font-bold font-exo text-2xl  tracking-wide">Copywrites and Year</h1>
+          <h1 className="font-bold font-exo text-2xl  tracking-wide">Assume Cool Feature.</h1>
+          <h1 className="font-bold font-exo text-2xl  tracking-wide">Mini Form.</h1>
+          <h1 className="font-bold font-exo text-2xl  tracking-wide">Copywrites and Year.</h1>
     </>
   )
 }
