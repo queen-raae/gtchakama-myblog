@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import {  Seo } from "@/components/common"
 import Layout from "@/components/Layout"
-// import { INode, PageProps } from "@/definitions"
+import { PageProps } from "@/definitions"
 
 const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -16,7 +16,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="All posts" />
        {/* <Bio /> */}
       <h1>
-      About Page
+      About Page 2
       </h1>
     </Layout>
   )
