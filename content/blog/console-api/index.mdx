@@ -2,10 +2,10 @@
 slug: console-api
 date: 2021-08-23
 title: "JavaScript Console API 💬"
-description: "Javascript console object has multiple methods which give you the ability to log out objects in different ways and to get other related information.
+description: "js console object has multiple methods which give you the ability to log out objects in different ways and to get other related information.
 "
 categories: ["6 min read ☕"]
-keywords: ["JS Console","console","console.log","console.error","console.table","console.group","console method",]
+keywords: ["js Console","console","console.log","console.error","console.table","console.group","console method",]
 tags: Productivity, API
 banner: "./banner.png"
 published: true
@@ -16,11 +16,11 @@ Console is a web tool for developers to debug their code. It is used to display 
 
 Console is a global object so it is available in every scope. It is also available in the global scope of the browser window.
 
-# Javascript Console **Methods**
+## JavaScript Console **Methods**
 
-Javascript console object has multiple methods which give you the ability to log out objects in different ways and to get other related information.
+JavaScript console object has multiple methods which give you the ability to log out objects in different ways and to get other related information.
 
-Console in javascript has more than 5 methods. Among all console methods, the log method is the most commonly used.
+Console in js has more than 5 methods. Among all console methods, the log method is the most commonly used.
 
 ## 1. The warn method ❗
 
@@ -28,8 +28,9 @@ If you are working with developer tools or API’s, console.warn() is really use
 This is commonly used by the NPM packages to let developers know if the API/version is deprecated or about any future changes to the library. Some browsers add a small exclamation mark ⚠️ in the console log for warnings.
 Here is an example:
 
-```Javascript
-console.warn("Please get vaccinated 😉");
+```js
+const me = 100
+console.warn("Please get vaccinated 😉")
 ```
 
 Output:
@@ -41,7 +42,7 @@ Output:
 The method console.error() allows us to print error messages in the console. It takes the error message as one single argument. This method is often used for testing purposes.
 Here is an example:
 
-```Javascript
+```js
  console.error("its 2021 and we still can't download food 😪");
 ```
 
@@ -57,7 +58,7 @@ Each element in the array becomes a row in the table.
 
 The first column of the table is labeled as an index. For objects index will be property name and for array index are the actual index of array elements.Have a look at the example below:
 
-```JavaScript
+```js
 console.table([
     {
       Name: "George",
@@ -91,10 +92,10 @@ console.group() allows us to group the console statements. To end the grouping o
 It is optional to pass the parameter to the console.group(). You should still do it in order to clarify what values are being grouped together. The parameter passed will be displayed as a label for the group.
 console.groupEnd() does not require any parameter, as it will always close the most recently created group.
 
-```JavaScript
+```js
 const label = "Top 5 Languages I've Used.";
   console.group(label);
-  console.info("JavaScript");
+  console.info("js");
   console.info("PHP");
   console.info("C#");
   console.info("C");
@@ -109,7 +110,7 @@ Output:
 
 To add CSS styling to the console output, we use the CSS format specifier %c. Then we start the console message, which is usually a String with the specifier followed by the message we intend to log, and, finally, the styles we want to apply to the message:
 
-```JavaScript
+```js
   const spacing = "10px";
 
   const styles = `padding: ${spacing};

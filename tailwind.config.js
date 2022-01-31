@@ -18,6 +18,7 @@ const themes = {
     anchor: "var(--color-anchor)",
     "anchor-hover": "var(--color-anchor-hover)",
     fg: "var(--color-text)",
+    "para-green": "var(--color-greenish)",
     "fg-muted": "var(--color-text-muted)",
     primary: "var(--color-primary)",
     secondary: "var(--color-secondary)",
