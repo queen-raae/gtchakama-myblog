@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My small Blog`,
+    title: `Chakama`,
     author: {
       name: `George Chakama`,
       summary: ` A software engineer who is based in Harare Zimbabwe.`,
@@ -15,6 +15,17 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
+        // The values for each key in this example are the defaults the plugin uses.
+        sourceMap: true,
+        autoLabel: "dev-only",
+        labelFormat: `[local]`,
+        cssPropOptimization: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
