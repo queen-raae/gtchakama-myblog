@@ -1,30 +1,28 @@
 ---
 slug: breakdown-bricky
 date: 2021-06-19
-title: 'Breakdown : Bricky Game'
-description: '2 years ago i made a Brick breaker game in Vanilla JS. Lets break It down and see every concept I used and what I could have done better.'
-categories: ['10 min read ☕']
+title: "Breakdown : Bricky Game"
+description: "2 years ago i made a Brick breaker game in Vanilla JS. Lets break It down and see every concept I used and what I could have done better."
+categories: ["10 min read ☕"]
 keywords:
   [
-    'test',
-    'JS Bricky Game',
-    'Zim blogger',
-    'zim tech',
-    'techzim',
-    'gaming console',
-    'canvas',
-    ' GitHub Repo',
-    ' Event listeners',
-    'Functions',
-    'chakama',
-    'George Chakama ',
+    "JS Bricky Game",
+    "Zim blogger",
+    "zim tech",
+    "techzim",
+    "gaming console",
+    "canvas",
+    " GitHub Repo",
+    " Event listeners",
+    "Functions",
+    "chakama",
+    "George Chakama ",
   ]
 tags: Gaming
-banner: './code-vscode.jpg'
+banner: "./code-vscode.jpg"
 published: true
-author: 'George Chakama'
+author: "George Chakama"
 ---
-
 
 > ![this slowpoke moves](https://www.chakama.co.zw/images/bricky.gif)
 
@@ -95,8 +93,8 @@ To actually be able to render graphics on the **(canvas)** element, first we hav
 
 ```js
 //Create variables to reference and store canvas
-let canvas = document.getElementById('mycanvas')
-let ctx = canvas.getContext('2d')
+let canvas = document.getElementById("mycanvas")
+let ctx = canvas.getContext("2d")
 let ballRadius = 10
 let x = canvas.width / 2
 let y = canvas.height - 30
@@ -156,9 +154,9 @@ Lets add some Event listeners for when we press the Keys to move our paddle. Pre
 </div>
 
 ```js
-document.addEventListener('keydown', keyDownHandler, false)
-document.addEventListener('keyup', keyUpHandler, false)
-document.addEventListener('mousemove', mouseMoveHandler, false)
+document.addEventListener("keydown", keyDownHandler, false)
+document.addEventListener("keyup", keyUpHandler, false)
+document.addEventListener("mousemove", mouseMoveHandler, false)
 ```
 
 </div>
@@ -193,7 +191,7 @@ function keyUpHandler(e) {
     leftPressed = false
   }
 }
-document.addEventListener('mousemove', mouseMoveHandler, false)
+document.addEventListener("mousemove", mouseMoveHandler, false)
 ```
 
 </div>
@@ -212,7 +210,7 @@ document.addEventListener('mousemove', mouseMoveHandler, false)
 function drawBall() {
   ctx.beginPath()
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2)
-  ctx.fillStyle = 'red'
+  ctx.fillStyle = "red"
   ctx.fill()
   ctx.closePath()
 }
@@ -232,7 +230,7 @@ function drawBall() {
 function drawPaddle() {
   ctx.beginPath()
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight)
-  ctx.fillStyle = 'blue'
+  ctx.fillStyle = "blue"
   ctx.fill()
   ctx.closePath()
 }
@@ -259,7 +257,7 @@ function drawBricks() {
         bricks[c][r].y = brickY
         ctx.beginPath()
         ctx.rect(brickX, brickY, brickWidth, brickHeight)
-        ctx.fillStyle = '#6600cc'
+        ctx.fillStyle = "#6600cc"
         ctx.fill()
         ctx.closePath()
       }
@@ -280,9 +278,9 @@ function drawBricks() {
 
 ```js
 function drawScore() {
-  ctx.font = '18px Arial'
-  ctx.fillStyle = 'brown'
-  ctx.fillText('score: ' + score, 8, 20) //position score at 8,20 on the x,y axis of the canvas
+  ctx.font = "18px Arial"
+  ctx.fillStyle = "brown"
+  ctx.fillText("score: " + score, 8, 20) //position score at 8,20 on the x,y axis of the canvas
 }
 ```
 
@@ -355,7 +353,7 @@ function draw() {
     }
     //if no paddle hit, body of canvas is hit ==> game over
     else {
-      alert('GAME OVER!!')
+      alert("GAME OVER!!")
       document.location.reload()
     }
   }
