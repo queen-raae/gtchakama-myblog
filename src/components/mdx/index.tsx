@@ -2,7 +2,7 @@ import { MDXProviderComponentsProp, MDXProviderProps } from "@mdx-js/react"
 import React, { ReactElement } from "react"
 import Counter from "./Counter"
 import CodeBlock from "./CodeBlock"
-
+// import ads component
 const preToCodeBlock = (preProps: MDXProviderProps) => {
   if (
     // children is code element
