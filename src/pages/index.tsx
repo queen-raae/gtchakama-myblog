@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
+// import { jsx } from '@emotion/react'
 import { Bio, Seo } from "@/components/common"
 import Layout from "@/components/Layout"
 import { INode, PageProps } from "@/definitions"
@@ -25,16 +25,17 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Home" />
       <ol className="divide-y divide-skin-fg-muted max-w-2xl">
         {posts.map(({ node }: { node: INode }, index: number) => {
           const title = node.frontmatter.title || node.fields.slug
           const classes = index === 0 ? "pb-12" : "py-12"
           return (
             <li key={node.fields.slug} className={classes}>
+               
               <article itemScope itemType="http://schema.org/Article">
                 <header>
-                  <small className="font-yrsa text-skin-fg-muted text-lg">
+                  <small className="font-yrsa text-skin-para-green text-lg">
                     {node.frontmatter.date}
                   </small>
                   <h2 className="text-2xl font-exo font-black text-skin-fg mt-3">
@@ -52,9 +53,9 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
                     __html: node.excerpt || node.frontmatter.description,
                   }}
                   itemProp="description"
-                  className="text-lg font-yrsa text-skin-fg mt-3"
+                  className="text-lg font-yrsa text-gray-500 dark:text-gray-300 mt-3"
                 />
-                <section className="font-yrsa text-skin-fg-muted uppercase md:text-sm space-x-2 mt-3">
+                <section className="font-yrsa text-skin-para-green uppercase md:text-sm space-x-2 mt-3">
                   {(node.frontmatter.tags || "")
                     .split(",")
                     .map((s: string) => s.trim())
