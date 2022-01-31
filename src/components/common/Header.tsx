@@ -4,7 +4,7 @@ import { Popover, Transition } from "@headlessui/react"
 import { HomeIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { EmptyProps } from "@/definitions"
 
-const resources = ["Dashboard", "Posts", "Projects", "About"]
+const resources = ["About", "Posts", "Projects", "Contact"]
 
 const Header: React.FC<EmptyProps> = () => {
   return (
