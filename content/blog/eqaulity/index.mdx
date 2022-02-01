@@ -1,0 +1,78 @@
+---
+title:  == vs ===
+date: "2021-01-31"
+tags: equality, strict, abstract
+description: "JavaScript has two almost identical ways to test equality. 
+You can test equality with `==` or `===`. This post will explain the difference
+ between these two operators and how to decide when to use one over the other.
+"
+---
+
+> The difference between them can be summed up as follows: Abstract equality will attempt
+> to resolve the data types via type coercion before making a comparison. **Strict equality
+> will return false if the types are different**.
+
+## Strict equality
+
+When using triple equals `===` in JavaScript, we are testing for **strict** equality. This means both the **type** and the **value** we are comparing have to be the same.
+
+### Example
+
+```js
+17 === 17
+// true
+```
+
+In this example we’re comparing the _number_ 17 with the _number_ 17. As expected, `true` is returned. Both are **numbers**, and both share the same **value** of 17.
+
+### Example 2
+
+```js
+console.log("I am a String." === new String("I am also a String."))
+// false
+```
+
+To see why strict equality returned false, take a look at this:
+
+```js
+console.log(typeof "This is a string.") // string
+console.log(typeof new String("This is a string.")) //object
+```
+
+**Example 2** returned false because of the different data types we have.
+
+### Example 3
+
+```js
+"coffee" === "coffee"
+// true (Both are Strings and have equal values)
+
+true === true
+// true (Both are Booleans and have equal values)
+```
+
+> Awesome! Again, the key takeaway for triple (strict) equality is that both the **type** and the **value** we are comparing have to be the same.
+
+## Abstract equality
+
+When using double equals in JavaScript we are testing for **loose equality.** It also checks whether its two operands are equal, returning a Boolean result. Unlike the strict equality operator, it attempts to convert and compare operands that are of different types. This is known as **type coercion**.
+
+### Example 1
+
+```js
+17 == "17"
+// true
+```
+
+You can see we get `true`. That because of type coercion. JavaScript will actually try to convert our values into a like type. In this case, it succeeds. The string value of `'17'` can easily be converted into the number value of `17`. Since `17` equals `17`, we get our answer of `true`.
+
+### Example 2
+
+```js
+console.log(1 == 1)
+// expected output: true
+```
+
+## Which one is better
+
+Keep it strict. Using the strict equality operator by default will increase the clarity of your code and prevent any false positives caused by abstract equality comparison. When you need to compare values of different types, do the conversions yourself. The more explicit your code, the better.
