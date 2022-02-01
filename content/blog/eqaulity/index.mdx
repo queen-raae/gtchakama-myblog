@@ -1,5 +1,5 @@
 ---
-title:  == vs ===
+title:  == or === 😟
 date: "2022-01-31"
 tags: equality, strict, abstract
 description: "JavaScript has two almost identical ways to test equality. 
@@ -35,8 +35,8 @@ console.log("I am a String." === new String("I am also a String."))
 To see why strict equality returned false, take a look at this:
 
 ```js
-console.log(typeof "This is a string.") // string
-console.log(typeof new String("This is a string.")) //object
+console.log(typeof "I am a String.") // string
+console.log(typeof new String("I am also String.")) //object
 ```
 
 **Example 2** returned false because of the different data types we have.
