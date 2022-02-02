@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import { Bio, Seo } from "@/components/common"
 import Layout from "@/components/Layout"
 import { INode, PageProps } from "@/definitions"
-
+import { Helmet } from "react-helmet"
 const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMdx.edges
@@ -26,6 +26,9 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Home" />
+      <Helmet>
+                <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png"/>
+            </Helmet>
       <ol className="divide-y divide-skin-fg-muted max-w-2xl">
         {posts.map(({ node }: { node: INode }, index: number) => {
           const title = node.frontmatter.title || node.fields.slug
