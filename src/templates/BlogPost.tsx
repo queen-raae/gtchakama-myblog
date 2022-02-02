@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 import { Seo } from "../components/common"
 import { PageProps } from "@/definitions"
-
+import { Helmet } from "react-helmet"
 const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -15,7 +15,26 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        // opengraph = {post.frontmatter.title}
       />
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>{post.frontmatter.title} </title>
+                <meta name="description" content={post.frontmatter.description || post.excerpt}  />
+                <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png"/>
+
+                <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@gtchakama" />
+<meta name="twitter:title" content={post.frontmatter.title} />
+<meta name="twitter:description" content={post.frontmatter.description || post.excerpt} />
+<meta name="twitter:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content={post.frontmatter.title}  />
+<meta property="og:description" content={post.frontmatter.description || post.excerpt}/>
+<meta property="og:url" content="https://www.chakama.co.zw/" />
+<meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+            </Helmet>
       <article itemScope itemType="http://schema.org/Article">
         <header className="grid grid-cols-blog">
           <h1
@@ -75,6 +94,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        banner {
+          id
+        }
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {

@@ -5,8 +5,10 @@ module.exports = {
       name: `George Chakama`,
       summary: ` A software engineer who is based in Harare Zimbabwe.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Just a dude who is super passionate about exploring and building progressive web apps
+    and tools. Currently, I am diving into the React ecosystem with backend
+    in Node.js`,
+    siteUrl: `https://chakama.co.zw/`,
     social: {
       twitter: `gtchakama`,
       linkedin: `gtchakama`,

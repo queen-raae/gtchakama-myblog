@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import { Bio, Seo } from "@/components/common"
 import Layout from "@/components/Layout"
 import { INode, PageProps } from "@/definitions"
-
+import { Helmet } from "react-helmet"
 const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMdx.edges
@@ -26,6 +26,24 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Home" />
+      <Helmet>
+      <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@gtchakama" />
+<meta name="twitter:title" content="George Chakama | Digital Garden" />
+<meta name="twitter:description" content="I'm super passionate about exploring and building progressive web apps
+          and tools. Currently, I'm diving into the React ecosystem with backend
+          in Node.js" />
+<meta name="twitter:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="George Chakama | Digital Garden" />
+<meta property="og:description" content="I'm super passionate about exploring and building progressive web apps
+          and tools. Currently, I'm diving into the React ecosystem with backend
+          in Node.js" />
+<meta property="og:url" content="https://www.chakama.co.zw/" />
+<meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+
+            </Helmet>
       <ol className="divide-y divide-skin-fg-muted max-w-2xl">
         {posts.map(({ node }: { node: INode }, index: number) => {
           const title = node.frontmatter.title || node.fields.slug
