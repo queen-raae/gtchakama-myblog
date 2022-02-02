@@ -22,6 +22,18 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
                 <title>{post.frontmatter.title} </title>
                 <meta name="description" content={post.frontmatter.description || post.excerpt}  />
                 <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png"/>
+
+                <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@gtchakama" />
+<meta name="twitter:title" content={post.frontmatter.title} />
+<meta name="twitter:description" content={post.frontmatter.description || post.excerpt} />
+<meta name="twitter:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content={post.frontmatter.title}  />
+<meta property="og:description" content={post.frontmatter.description || post.excerpt}/>
+<meta property="og:url" content="https://www.chakama.co.zw/" />
+<meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
             </Helmet>
       <article itemScope itemType="http://schema.org/Article">
         <header className="grid grid-cols-blog">
