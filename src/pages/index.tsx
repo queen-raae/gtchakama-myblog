@@ -27,7 +27,22 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Home" />
       <Helmet>
-                <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png"/>
+      <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@gtchakama" />
+<meta name="twitter:title" content="George Chakama | Digital Garden" />
+<meta name="twitter:description" content="I'm super passionate about exploring and building progressive web apps
+          and tools. Currently, I'm diving into the React ecosystem with backend
+          in Node.js" />
+<meta name="twitter:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="George Chakama | Digital Garden" />
+<meta property="og:description" content="I'm super passionate about exploring and building progressive web apps
+          and tools. Currently, I'm diving into the React ecosystem with backend
+          in Node.js" />
+<meta property="og:url" content="https://www.chakama.co.zw/" />
+<meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+
             </Helmet>
       <ol className="divide-y divide-skin-fg-muted max-w-2xl">
         {posts.map(({ node }: { node: INode }, index: number) => {
