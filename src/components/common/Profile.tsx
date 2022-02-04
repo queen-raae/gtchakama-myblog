@@ -72,13 +72,12 @@ const Bio: React.FC<EmptyProps> = () => {
           </div>
         </div>
       </div>
-      <p className="mt-5 font-yrsa text-lg text-skin-fg">I'm super passionate about exploring and building progressive web apps
-          and tools. Currently, I'm diving into the React ecosystem with backend
+      <p className="mt-5 font-yrsa text-lg text-skin-fg">I'm super passionate about exploring and building Progressive Web Apps. Currently, I'm diving into the React ecosystem with backend
           in Node.js</p>
           <div className="pt-2 flex space-x-4 justify-between">
-            <Link className="border rounded-md text-center hover:text-white p-1 w-1/3 hover:rounded-lg border-green-500 border-2 hover:bg-green-500 focus:ring-green-100 text-skin-fg" to="/">Read More</Link>
-            <Link className="border rounded-md text-center hover:text-white p-1 w-1/3 hover:rounded-lg border-green-500 border-2 hover:bg-green-500 focus:ring-green-100 text-skin-fg" to="/">Projects</Link>
-            <Link className="border rounded-md text-center hover:text-white p-1 w-1/3 hover:rounded-lg border-green-500 border-2 hover:bg-green-500 focus:ring-green-100 text-skin-fg" to="/">Hire Me</Link>
+            <Link to="/about" className="border rounded-md text-center hover:text-white p-1 w-1/3 hover:rounded-lg border-green-500 border-2 hover:bg-green-500 focus:ring-green-100 text-skin-fg" >Read More</Link>
+            <Link to="/projects" className="border rounded-md text-center hover:text-white p-1 w-1/3 hover:rounded-lg border-green-500 border-2 hover:bg-green-500 focus:ring-green-100 text-skin-fg" >Projects</Link>
+            <Link to="/contact" className="border rounded-md text-center hover:text-white p-1 w-1/3 hover:rounded-lg border-green-500 border-2 hover:bg-green-500 focus:ring-green-100 text-skin-fg" >Hire Me</Link>
           </div>
     </>
   )

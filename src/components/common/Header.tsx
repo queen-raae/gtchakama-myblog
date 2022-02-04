@@ -27,15 +27,33 @@ const Header: React.FC<EmptyProps> = () => {
             </Popover.Button>
           </div>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8">
-            {resources.map(item => (
-              <Link
-                to="/"
-                key={item}
-                className="whitespace-nowrap text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-skin-focus"
-              >
-                {item}
-              </Link>
-            ))}
+          <Link
+                    to="/about"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    About
+                  </Link>
+
+                  <Link
+                    to="/posts"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    Posts
+                  </Link>
+
+                  <Link
+                    to="/projects"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    Projects
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    Contact
+                  </Link>
           </div>
         </div>
       </div>
@@ -73,15 +91,34 @@ const Header: React.FC<EmptyProps> = () => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                {resources.map(item => (
-                  <Link
-                    to="/"
-                    key={item}
+              <Link
+                    to="/about"
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
                   >
-                    {item}
+                    About
                   </Link>
-                ))}
+
+                  <Link
+                    to="/posts"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    Posts
+                  </Link>
+
+                  <Link
+                    to="/projects"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    Projects
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                  >
+                    Contact
+                  </Link>
+
               </div>
             </div>
           </div>
