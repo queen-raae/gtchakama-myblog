@@ -36,23 +36,23 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
 <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
             </Helmet>
       <article itemScope itemType="http://schema.org/Article">
-        <header className="grid grid-cols-blog">
+        <header className="grid grid-cols-blog text-center">
           <h1
-            className="col-start-2 font-exo font-black text-skin-fg text-4xl md:text-6xl"
+            className="col-start-2 self-title font-black text-skin-para-green text-3xl md:text-4xl"
             itemProp="headline"
           >
             {post.frontmatter.title}
           </h1>
-          <p className="col-start-2 font-yrsa text-skin-fg text-xl">
+          <p className="col-start-2 self-small-heading text-skin-fg text-xl">
             {post.frontmatter.date}
           </p>
         </header>
-        <section itemProp="articleBody" className="prose prose-xl mt-8 mx-auto">
+        <section itemProp="articleBody" className="prose prose-xl self-paragraph mt-8 mx-auto">
           <MDXRenderer>{post.body}</MDXRenderer>
         </section>
       </article>
       <nav className="mt-8 grid grid-cols-blog">
-        <ul className="col-start-2 text-lg flex flex-wrap justify-between">
+        <ul className="col-start-2 text-lg flex flex-wrap justify-around">
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

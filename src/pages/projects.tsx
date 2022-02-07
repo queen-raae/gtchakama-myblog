@@ -13,17 +13,17 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Projects" />
        {/* <Bio /> */}
        <section className="dark:bg-coolGray-800 dark:text-coolGray-100">
 	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
 		<div>
-			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-coolGray-50">Aliquip definiebas ad est</h2>
+			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-coolGray-50">Projects I have worked On</h2>
 			<p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-coolGray-400">Quando cetero his ne, eum admodum sapientem ut.</p>
 		</div>
 		<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 			<div>
-				<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50">Ad vix debet docendi</h3>
+				<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50">HearMe</h3>
 				<p className="mt-3 text-lg dark:text-coolGray-400">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
 				<div className="mt-12 space-y-12">
 					<div className="flex">
@@ -74,7 +74,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 		<div>
 			<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 				<div className="lg:col-start-2">
-					<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50">Eam nibh gloriatur ex</h3>
+					<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50">Chiremba</h3>
 					<p className="mt-3 text-lg dark:text-coolGray-400">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
 					<div className="mt-12 space-y-12">
 						<div className="flex">

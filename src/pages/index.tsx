@@ -5,6 +5,7 @@ import { Bio, Seo } from "@/components/common"
 import Layout from "@/components/Layout"
 import { INode, PageProps } from "@/definitions"
 import { Helmet } from "react-helmet"
+import "../fonts.css"
 const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMdx.edges
@@ -53,14 +54,14 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
                
               <article itemScope itemType="http://schema.org/Article">
                 <header>
-                  <small className="font-yrsa text-skin-para-green text-lg">
+                  <small className="self-paragraph text-skin-para-green text-lg">
                     {node.frontmatter.date}
                   </small>
-                  <h2 className="text-2xl font-exo font-black text-skin-fg mt-3">
+                  <h2 className="text-2xl self-title font-black text-skin-fg mt-3">
                     <Link
                       to={node.fields.slug}
                       itemProp="url"
-                      className="rounded-md focus:outline-none focus:ring-4 focus:ring-skin-focus"
+                      className="rounded-md hover:text-skin-para-green active:text-skin-para-green focus:outline-none  focus:text-skin-para-green"
                     >
                       <span itemProp="headline">{title}</span>
                     </Link>
@@ -71,9 +72,9 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
                     __html: node.excerpt || node.frontmatter.description,
                   }}
                   itemProp="description"
-                  className="text-lg font-yrsa text-gray-500 dark:text-gray-300 mt-3"
+                  className="text-lg self-paragraph text-gray-500 dark:text-gray-300 mt-3"
                 />
-                <section className="font-yrsa text-skin-para-green uppercase md:text-sm space-x-2 mt-3">
+                <section className="self-paragraph text-skin-para-green uppercase md:text-sm space-x-2 mt-3">
                   {(node.frontmatter.tags || "")
                     .split(",")
                     .map((s: string) => s.trim())

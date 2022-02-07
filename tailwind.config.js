@@ -53,25 +53,25 @@ module.exports = {
               code: { color: theme("colors.focus") },
             },
             h1: {
-              fontWeight: "700",
+              fontWeight: "500",
               letterSpacing: theme("letterSpacing.tight"),
               color: theme("colors.fg"),
               fontFamily: "Exo",
             },
             h2: {
-              fontWeight: "700",
+              fontWeight: "500",
               letterSpacing: theme("letterSpacing.tight"),
               color: theme("colors.fg"),
               fontFamily: "Exo",
             },
             h3: {
-              fontWeight: "700",
+              fontWeight: "500",
               fontFamily: "Exo",
               color: theme("colors.fg"),
             },
             "h4,h5,h6": {
               fontFamily: "Exo",
-              fontWeight: "600",
+              fontWeight: "400",
               color: theme("colors.fg"),
             },
             code: {
@@ -99,7 +99,7 @@ module.exports = {
               },
             },
             blockquote: {
-              fontSize: "1.5rem",
+              fontSize: "1.2rem",
               color: theme("colors.fg"),
               borderLeftColor: theme("colors.fg-muted"),
             },

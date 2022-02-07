@@ -1,0 +1,25 @@
+/* Roboto Link */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* 
+font-family: 'Roboto', sans-serif;
+*/
+/* Rubik Link */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+/* 
+font-family: 'Rubik', sans-serif;
+*/
+/* Nunito Sans Link */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@1,200&display=swap');
+/* 
+font-family: 'Nunito Sans', sans-serif;
+*/
+
+.self-title{
+    font-family: 'Rubik', sans-serif;
+}
+.self-paragraph{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.self-small-heading{
+    font-family: 'Roboto', sans-serif;
+}

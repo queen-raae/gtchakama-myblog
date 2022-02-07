@@ -4,7 +4,7 @@ import { Popover, Transition } from "@headlessui/react"
 import { HomeIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { EmptyProps } from "@/definitions"
 
-const resources = ["About", "Posts", "Projects", "Contact"]
+// const resources = ["About", "Posts", "Projects", "Contact"]
 
 const Header: React.FC<EmptyProps> = () => {
   return (
@@ -21,12 +21,12 @@ const Header: React.FC<EmptyProps> = () => {
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-skin-header rounded-md p-2 inline-flex items-center justify-center text-skin-header-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus">
+            <Popover.Button className="bg-skin-header  p-2 inline-flex items-center justify-center text-skin-header-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8">
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8 self-title">
           <Link
                     to="/about"
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
@@ -69,11 +69,11 @@ const Header: React.FC<EmptyProps> = () => {
       >
         <Popover.Panel
           focus
-          className="z-50 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          className="z-50 absolute top-0 inset-x-0 transition transform origin-top-right md:hidden"
         >
-          <div className="rounded-lg shadow-lg ring-1 ring-skin-header ring-opacity-5 bg-skin-header text-skin-header-fg border divide-y-2 divide-skin-header-muted">
+          <div className=" shadow-lg bg-skin-header text-skin-header-fg h-screen divide-y-2 divide-skin-header-muted">
             <div className="pt-5 pb-6 px-5">
-              <div className="z-50 flex items-center justify-between">
+              <div className="z-50 flex items-center justify-between self-title">
                 <Link
                   to="/"
                   className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
@@ -90,7 +90,7 @@ const Header: React.FC<EmptyProps> = () => {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div className="grid grid-cols-2 gap-y-4 gap-x-8 self-title">
               <Link
                     to="/about"
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
@@ -120,6 +120,9 @@ const Header: React.FC<EmptyProps> = () => {
                   </Link>
 
               </div>
+            </div>
+            <div className="py-6 px-5">
+              <h1>Smal Form or CTA</h1>
             </div>
           </div>
         </Popover.Panel>
