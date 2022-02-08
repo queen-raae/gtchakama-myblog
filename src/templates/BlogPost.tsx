@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
+// import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import { Seo } from "../components/common"
 import { PageProps } from "@/definitions"
@@ -10,28 +10,29 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  // const mybanner = data.mdx.frontmatter.
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.description}
         // opengraph = {post.frontmatter.title}
       />
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>{post.frontmatter.title} </title>
-                <meta name="description" content={post.frontmatter.description || post.excerpt}  />
+                <meta name="description" content={post.frontmatter.description}  />
                 <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png"/>
 
                 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@gtchakama" />
 <meta name="twitter:title" content={post.frontmatter.title} />
-<meta name="twitter:description" content={post.frontmatter.description || post.excerpt} />
+<meta name="twitter:description" content={post.frontmatter.description} />
 <meta name="twitter:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
 
 <meta property="og:type" content="article" />
 <meta property="og:title" content={post.frontmatter.title}  />
-<meta property="og:description" content={post.frontmatter.description || post.excerpt}/>
+<meta property="og:description" content={post.frontmatter.description}/>
 <meta property="og:url" content="https://www.chakama.co.zw/" />
 <meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
             </Helmet>
@@ -43,6 +44,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
           >
             {post.frontmatter.title}
           </h1>
+        
           <p className="col-start-2 self-small-heading text-skin-fg text-xl">
             {post.frontmatter.date}
           </p>
@@ -94,9 +96,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        banner {
-          id
-        }
+       
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {
