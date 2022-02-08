@@ -69,7 +69,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
                 </header>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: node.excerpt || node.frontmatter.description,
+                    __html: node.frontmatter.description || node.excerpt 
                   }}
                   itemProp="description"
                   className="text-lg self-paragraph text-gray-500 dark:text-gray-300 mt-3"
@@ -87,6 +87,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
           )
         })}
       </ol>
+      
       <footer className="py-6 dark:bg-coolGray-800 dark:text-coolGray-50">
 	<div className="container px-6 mx-auto space-y-6 divide-y divide-coolGray-400 md:space-y-12 divide-opacity-50">
 	
@@ -141,6 +142,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            
           }
         }
       }
