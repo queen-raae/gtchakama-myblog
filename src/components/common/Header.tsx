@@ -52,7 +52,7 @@ const Header: React.FC<EmptyProps> = () => {
                     to="/contact"
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
                   >
-                    Contact
+                    FAQ
                   </Link>
           </div>
         </div>
@@ -116,7 +116,7 @@ const Header: React.FC<EmptyProps> = () => {
                     to="/contact"
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
                   >
-                    Contact
+                    FAQ
                   </Link>
 
               </div>
