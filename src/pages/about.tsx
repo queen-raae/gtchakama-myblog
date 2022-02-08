@@ -6,12 +6,14 @@ import Layout from "@/components/Layout"
 import { PageProps } from "@/definitions"
 import twenty from "../components/timeline/twenty"
 import twentyone from "../components/timeline/twentyone"
+import twentytwo from "../components/timeline/twentytwo"
 
 const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
  
   const year20 = twenty;
   const year21 = twentyone;
+  const year22 = twentytwo;
 
  
 
@@ -22,7 +24,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
        <section className=" lg:p-8 dark:bg-coolGray-800 dark:text-coolGray-100">
 	<div className="container mx-auto space-y-12">
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-			<img src="https://source.unsplash.com/640x480/?1" alt="" className="h-80 dark:bg-coolGray-500 aspect-video"/>
+			<img src="https://i.ibb.co/G0zK7BW/ignite-23-01.jpg" alt="" className="h-80 dark:bg-coolGray-500 aspect-video"/>
 			<div className="flex flex-col justify-center flex-1 p-6 dark:bg-coolGray-900">
 				<span className="text-xs uppercase dark:text-coolGray-400">Who is George ?</span>
 				<h3 className="text-3xl font-bold">A Big Dreamer</h3>
@@ -97,12 +99,12 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 	<li>
 	<section className="dark:bg-coolGray-800 dark:text-coolGray-100">
 	<div className="container flex flex-col justify-center  md:p-8">
-		<p className="p-2 text-sm font-medium tracking-wider text-center uppercase">The Journey</p>
+		<p className="p-2 text-sm font-medium tracking-wider text-center uppercase">7 Yearly Highlights</p>
 		<h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Counting Every Stride</h2>
 		<div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-coolGray-700">
 			<details>
 				<summary className="py-2 outline-none cursor-pointer focus:underline">2022</summary>
-				{year20.map((item)=>(
+				{year22.map((item)=>(
 <article>
 			<a rel="noopener noreferrer" href="#" className="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-coolGray-900">
 				<h3 className="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">{item.title} </h3>
@@ -127,11 +129,17 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
         ))}
 			</details>
 			<details>
-				<summary className="py-2 outline-none cursor-pointer focus:underline">2020 and the rest</summary>
-				<div className="px-4 pb-4 space-y-2">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptates aspernatur dolores in consequatur doloremque inventore reprehenderit, consequuntur perspiciatis architecto.</p>
-					<p>Sed consectetur quod tenetur! Voluptatibus culpa incidunt veritatis velit quasi cupiditate unde eaque! Iure, voluptatibus autem eaque unde possimus quae.</p>
-				</div>
+				<summary className="py-2 outline-none cursor-pointer focus:underline">2020</summary>
+				{year20.map((item)=>(
+<article>
+			<a rel="noopener noreferrer" href="#" className="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-coolGray-900">
+				<h3 className="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">{item.title} </h3>
+				<time  className="row-start-1 mb-1 md:col-start-1 xl:col-span-2 dark:text-coolGray-400">{item.date} </time>
+				<p className="ml-8 md:col-start-2 md:col-span-4 xl:col-start-3 xl:col-span-9 md:ml-0 dark:text-coolGray-300">{item.description} </p>
+			</a>
+		</article>
+
+        ))}
 			</details>
 		</div>
 	</div>

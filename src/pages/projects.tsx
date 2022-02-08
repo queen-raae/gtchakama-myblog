@@ -24,7 +24,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 		<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 			<div>
 				<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50">HearMe</h3>
-				<p className="mt-3 text-lg dark:text-coolGray-400">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
+				<p className="mt-3 text-lg dark:text-coolGray-400">HearMe is a text-to-speech (TTS) app designed for people who are speech impaired, for example due to Aphasia, MND/ALS, Autism, Stroke, Cerebral Palsy or other speech problems.</p>
 				<div className="mt-12 space-y-12">
 					<div className="flex">
 						<div className="flex-shrink-0">
@@ -35,7 +35,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 							</div>
 						</div>
 						<div className="ml-4">
-							<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Per ei quaeque sensibus</h4>
+							<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Communication</h4>
 							<p className="mt-2 dark:text-coolGray-400">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
 						</div>
 					</div>
@@ -48,7 +48,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 							</div>
 						</div>
 						<div className="ml-4">
-							<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Cu imperdiet posidonium sed</h4>
+							<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Offline Use</h4>
 							<p className="mt-2 dark:text-coolGray-400">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
 						</div>
 					</div>
@@ -61,14 +61,14 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 							</div>
 						</div>
 						<div className="ml-4">
-							<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Nulla omittam sadipscing mel ne</h4>
+							<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Voice, Lang & Pitch</h4>
 							<p className="mt-2 dark:text-coolGray-400">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div aria-hidden="true" className="mt-10 lg:mt-0">
-				<img src="https://source.unsplash.com/random/360x480" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-coolGray-500"/>
+				<img src="https://i.ibb.co/1n3WxND/hearme.png" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-coolGray-500"/>
 			</div>
 		</div>
 		<div>
@@ -86,7 +86,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 								</div>
 							</div>
 							<div className="ml-4">
-								<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Cibo augue offendit has ad</h4>
+								<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Video Calls</h4>
 								<p className="mt-2 dark:text-coolGray-400">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
 							</div>
 						</div>
@@ -99,7 +99,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 								</div>
 							</div>
 							<div className="ml-4">
-								<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">At eum ferri luptatum lobortis</h4>
+								<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Medical History</h4>
 								<p className="mt-2 dark:text-coolGray-400">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
 							</div>
 						</div>
@@ -112,7 +112,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 								</div>
 							</div>
 							<div className="ml-4">
-								<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Dicunt verterem evertitur eu sea</h4>
+								<h4 className="text-lg font-medium leading-6 dark:text-coolGray-50">Live Chat</h4>
 								<p className="mt-2 dark:text-coolGray-400">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
 							</div>
 						</div>
@@ -120,7 +120,7 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
 					</div>
 				</div>
 				<div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-					<img src="https://source.unsplash.com/random/361x481" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-coolGray-500"/>
+					<img src="https://i.ibb.co/BL0wCLJ/chiremba.png" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-coolGray-500"/>
 				</div>
 			</div>
 		</div>
