@@ -6,11 +6,18 @@ import Layout from "../components/Layout"
 import { Seo } from "../components/common"
 import { PageProps } from "@/definitions"
 import { Helmet } from "react-helmet"
+import { getImage } from "gatsby-plugin-image"
+
 const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-  // const mybanner = data.mdx.frontmatter.
+  const mybanner = data.mdx.frontmatter?.banner
+  const bannerGatsbyImage = getImage(mybanner)
+  const socialImagePath = bannerGatsbyImage?.images?.fallback?.src
+  const socialImageUrl = (data.site.siteMetadata?.siteUrl + socialImagePath).replace(/\/$/,'')
+
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -28,13 +35,13 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
 <meta name="twitter:site" content="@gtchakama" />
 <meta name="twitter:title" content={post.frontmatter.title} />
 <meta name="twitter:description" content={post.frontmatter.description} />
-<meta name="twitter:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+<meta name="twitter:image" content={socialImageUrl} />
 
 <meta property="og:type" content="article" />
 <meta property="og:title" content={post.frontmatter.title}  />
 <meta property="og:description" content={post.frontmatter.description}/>
 <meta property="og:url" content="https://www.chakama.co.zw/" />
-<meta property="og:image" content="https://i.ibb.co/BwYXRjr/twitter-card.png" />
+<meta property="og:image" content={socialImageUrl} />
             </Helmet>
       <article itemScope itemType="http://schema.org/Article">
         <header className="grid grid-cols-blog text-center">
@@ -44,7 +51,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
           >
             {post.frontmatter.title}
           </h1>
-        
+
           <p className="col-start-2 self-small-heading text-skin-fg text-xl">
             {post.frontmatter.date}
           </p>
@@ -86,6 +93,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     mdx(id: { eq: $id }) {
@@ -96,7 +104,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-       
+        banner {
+          childImageSharp {
+              gatsbyImageData(
+                width: 1200
+              )
+            }
+        }
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {

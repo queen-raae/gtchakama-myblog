@@ -27,6 +27,7 @@ interface ISite {
   siteMetadata: {
     title: string
     description: string
+    siteUrl: string,
     author: {
       name: string
       summary: string
@@ -54,5 +55,6 @@ interface INode {
     title: string
     tags?: string
     description: string
+    banner: any
   }
 }
