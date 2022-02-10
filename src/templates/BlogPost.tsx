@@ -6,18 +6,17 @@ import Layout from "../components/Layout"
 import { Seo } from "../components/common"
 import { PageProps } from "@/definitions"
 import { Helmet } from "react-helmet"
-import { getImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
   const mybanner = data.mdx.frontmatter?.banner
-  const bannerGatsbyImage = getImage(mybanner)
-  const socialImagePath = bannerGatsbyImage?.images?.fallback?.src
+
+  const socialImagePath = mybanner?.childImageSharp?.original?.src
   const socialImageUrl = (data.site.siteMetadata?.siteUrl + socialImagePath).replace(/\/$/,'')
 
-
+  console.log(mybanner)
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -106,10 +105,10 @@ export const pageQuery = graphql`
         description
         banner {
           childImageSharp {
-              gatsbyImageData(
-                width: 1200
-              )
+            original {
+              src
             }
+          }
         }
       }
     }
